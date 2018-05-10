@@ -1,0 +1,11 @@
+{
+    "connect": "Estado de conexión",
+    "disconnected": "No hay conexión con el servidor.",
+    "connecting": "Conectando",
+    "waitingToConnect": "Se intentará conectar en",
+    "connectNow": "Conectar ahora",
+    "InvalidSessionTitle": "Session inválida detectada!",
+    "InvalidSessionMessage": "Tu session se ha convertido en invalida. por favor realiza de nuevo un sign in para obtener una nueva session válida.",
+    "DuplicateSessionTitle": "Session de usuario duplicada detectada!",
+    "DuplicateSessionMessage": "Una nueva session con tus crdenciales se ha establecido con nuestros servidores. Por razones de seguridad tendrás que introducir de nuevo tus credenciales."
+}

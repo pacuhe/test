@@ -1,0 +1,11 @@
+{
+    "connect": "Connection status",
+    "disconnected": "There is no connection to server.",
+    "connecting": "Connecting",
+    "waitingToConnect": "An attempt to connect is happening in",
+    "connectNow": "Connect now",
+    "InvalidSessionTitle": "Invalid session detected!",
+    "InvalidSessionMessage": "Your session was became invalid, please re-sign in again to get a new valid session.",
+    "DuplicateSessionTitle": "Duplicate user session detected!",
+    "DuplicateSessionMessage": "A new session with your credentials was established with our servers. For security reasons you will need to reenter your user's credentials again."
+}

@@ -1,0 +1,7 @@
+{
+    "title": "GameRankings",
+    "tableTitle": "Ranking",
+    "userRanking": "Your best score",
+    "topN": "Top ",
+    "rankingDataError": "<br/><br/><br/>At this moment we can not show you this ranking. Please, try again later."
+}

@@ -1,0 +1,98 @@
+<html>
+
+<head>
+    <title>WiMi5 Ads</title>
+    <meta name="description" content="The ads page of the WiMi5 games.">
+    <meta name="google" content="notranslate">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <style>
+    .background {
+        background: rgb(0, 0, 0) !important;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin: 0;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+    /*	#A4Gwrap {
+		    background: rgba(0, 0, 0) !important;   
+		    display: -ms-flexbox;
+		    display: -webkit-flex;
+		    display: flex;
+		    -webkit-justify-content: center;
+		    -ms-flex-pack: center;
+		    justify-content: center;
+		    -webkit-align-items: center; 
+		    -ms-flex-align: center;
+		    align-items: center;
+		}*/
+    
+    #_4videoplayer {
+        margin: 0 !important;
+    }
+    </style>
+    <script type="text/javascript">
+    var appWindow,
+        appOrigin;
+
+    function messageHandler(event) {
+        switch (event.data) {
+            case 'ready':
+                appWindow = event.source;
+                appOrigin = event.origin;
+            default:
+                break;
+        }
+    }
+
+    function gotoGame(reason) {
+        if (document.adsDone) {
+            return;
+        }
+        if (!appWindow || !appOrigin) {
+            return console.error('Cannot send message to Chrome wrapper app - communication channel has not yet been opened');
+        }
+        appWindow.postMessage(reason, appOrigin);
+        document.adsDone = true;
+    }
+    window.addEventListener('message', messageHandler);
+
+    function gotoGameTimerClose() {
+        gotoGame('adsense/user/timer');
+    }
+
+    function gotoGameUserClose() {
+        gotoGame('adsense/user/close');
+    }
+
+    function adWasClicked() {
+        gotoGame('adsense/user/clicked');
+    }
+
+    function isMobile(){
+        return false;
+    }
+
+    function getExtraChannels( ){
+        return [ "6941313387" ];
+    }
+
+    </script>
+</head>
+
+<body class="background">
+    <div id="outstreamContainer" style="width: 480px; height: 360px;"></div>
+    <script type="text/javascript" src="https://imasdk.googleapis.com/js/sdkloader/outstream.js"></script>
+    <script type="text/javascript" src="ads.js"></script>
+</body>
+
+</html>

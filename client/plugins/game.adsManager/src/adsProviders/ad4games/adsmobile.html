@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WiMi5 Ads</title>
+    <meta name="description" content="The ads page of the WiMi5 games.">
+    <meta name="google" content="notranslate">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <style>
+    #A4Gwrap {
+        background: rgba(0, 0, 0, .8) !important;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    #_4videoplayer{
+        margin:0 !important;
+    }
+    </style>
+    <script type="text/javascript">
+    function gotoGame(reason) {
+        if (document.adsDone) {
+            return;
+        }
+        window.parent.postMessage(reason || 'ad4games/user/close', '*');
+        document.adsDone = true;
+    }
+
+    function gotoGameTimerClose() {
+        gotoGame('ad4games/user/timer');
+    }
+
+    function gotoGameUserClose() {
+        gotoGame('ad4games/user/close');
+    }
+
+    function adWasClicked() {
+        document.getElementById("A4Gwrap").remove();
+        gotoGame('ad4games/user/clicked');
+    }
+    </script>
+</head>
+
+<body style="margin:0; text-align:center;background-color:transparent">
+    <!-- AD4GAME AD-X -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://s0.2mdn.net/instream/html5/ima3.js"></script>
+    <script type="text/javascript" src="https://ads.ad4game.com/www/delivery/widgets/afgmobile/index.php?s=5629188325&t=image&u=http%3A%2F%2Fplay.wimi5.com"></script>
+    <!-- END AD4GAME AD-X -->
+</body>
+
+</html>
